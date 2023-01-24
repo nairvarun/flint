@@ -1,0 +1,22 @@
+...---<blockchain bad>---<verifiable ds>---<optimize>---...
+         |                 |
+         |                 |
+         |                 |
+         |                 +---<merkle tree>
+         |                 |
+         |                 +---<verkle tree>
+         |                 |
+         |                 +---<hex bloom>
+         |                 |
+         |                 +---<b tree>
+         |                 |
+         |                 +---<lsm tree>
+         |                 |
+         |                 +---<???>
+         |
+         |
+         +---<existing networks>
+         |
+         +---<consensus protocols>
+         |
+         +---<scaling solutions>
