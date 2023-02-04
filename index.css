@@ -10,6 +10,7 @@ body {
     background: #ECEFF4;
     padding: 0px;
     margin: 0px;
+    cursor: default;
 }
 
 a {
@@ -42,7 +43,6 @@ a {
     padding: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .stuff-item:first-child {
