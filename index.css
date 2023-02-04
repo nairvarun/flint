@@ -18,6 +18,16 @@ a {
     text-decoration: none;
 }
 
+::-moz-selection {
+  color: #2E3440;
+  background: #88C0D0;
+}
+
+::selection {
+  color: #2E3440;
+  background: #88C0D0;
+}
+
 .header {
     color: #2E3440;
     font-weight: bold;
