@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    -webkit-font-smoothing: antialiased;
+    background: #ECEFF4;
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    color: #2E3440;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 40px;
+    width: 100%;
+}
+
+.logo-text {
+    font-size: xx-large;
+}
+
+.stuff {
+    height: calc(100vh - 210px);
+    display: flex;
+    flex-direction: row !important;
+    padding: 0;
+}
+
+.stuff-item {
+    width: 50vw;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stuff-item:first-child {
+    background: #2E3440;
+    color: #ECEFF4;
+}
+
+.stuff-item:first-child a {
+    color: inherit;
+}
+
+.stuff-item_left {
+    max-width: 300px;
+}
+
+.stuff-github {
+    display: inline-block;
+    margin-top: 5px;
+    border: 2px solid;
+    padding: 10px 15px;
+    font-weight: bold;
+}
+
+.tree {
+    width: 100%;
+    height: auto;
+}
+
+.leaf-l1:hover,
+.leaf-l2:hover,
+.leaf-l3:hover,
+.leaf-l4:hover,
+.leaf-l1:hover~.l1,
+.leaf-l2:hover~.l2,
+.leaf-l3:hover~.l3,
+.leaf-l4:hover~.l4 {
+    fill: #bf616a;
+}
+
+@media only screen and (max-width: 900px) {
+    .stuff {
+        height: auto;
+        flex-direction: row !important;
+        display: block;
+    }
+
+    .stuff-item {
+        width: 100vw;
+    }
+}
