@@ -82,7 +82,7 @@ a {
     fill: #bf616a;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1000px) {
     .stuff {
         height: auto;
         flex-direction: row !important;
