@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700');
 
+:root  {
+    --nord6: #eceff4;
+    --nord0: #2e3440;
+    --nord11: #bf616a;
+    --nord8: #88c0d0;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -7,7 +14,7 @@
 body {
     font-family: "Roboto Mono", monospace;
     -webkit-font-smoothing: antialiased;
-    background: #ECEFF4;
+    background: var(--nord6);
     padding: 0px;
     margin: 0px;
     cursor: default;
@@ -19,13 +26,13 @@ a {
 }
 
 ::-moz-selection {
-  color: #2E3440;
-  background: #88C0D0;
+  color: var(--nord0);
+  background: var(--nord8);
 }
 
 ::selection {
-  color: #2E3440;
-  background: #88C0D0;
+  color: var(--nord0);
+  background: var(--nord8);
 }
 
 .header {
@@ -56,8 +63,8 @@ a {
 }
 
 .stuff-item:first-child {
-    background: #2E3440;
-    color: #ECEFF4;
+    background: var(--nord0);
+    color: var(--nord6);
 }
 
 .stuff-item:first-child a {
@@ -89,7 +96,7 @@ a {
 .leaf-l2:hover~.l2,
 .leaf-l3:hover~.l3,
 .leaf-l4:hover~.l4 {
-    fill: #bf616a;
+    fill: var(--nord11);
 }
 
 @media only screen and (max-width: 1000px) {
