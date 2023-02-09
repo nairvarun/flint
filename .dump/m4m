@@ -1,0 +1,5 @@
+pro:
+- straignt forward
+
+con:
+- need to handle deletions separately
