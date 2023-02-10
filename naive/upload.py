@@ -13,7 +13,7 @@ def main():
     # establish conection
     client = MongoClient()
     db = client['flint-dummy']
-    collection = db['m4m']
+    collection = db['naive']
 
     # create dummy data
     dummy_data = [

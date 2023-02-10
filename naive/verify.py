@@ -14,7 +14,7 @@ def main():
     # establish conection
     client = MongoClient()
     db = client['flint-dummy']
-    collection = db['m4m']
+    collection = db['naive']
 
     # get dummy data and verify
     for d in collection.find():

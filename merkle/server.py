@@ -19,7 +19,7 @@ async def log(data: LogData):
     # establish conection
     client = MongoClient()
     db = client['flint-dummy']
-    collection = db['m4u']
+    collection = db['merkle']
 
     # upload data
     collection.insert_one(dict(data))
@@ -32,7 +32,7 @@ async def challenge(data: str):
     # establish conection
     client = MongoClient()
     db = client['flint-dummy']
-    collection = db['m4u']
+    collection = db['merkle']
 
     # populate tree
     for d in collection.find():
@@ -56,7 +56,7 @@ async def get_state():
     # establish conection
     client = MongoClient()
     db = client['flint-dummy']
-    collection = db['m4u']
+    collection = db['merkle']
 
     # populate tree
     for d in collection.find():
@@ -72,7 +72,7 @@ async def get_state():
 #     # establish conection
 #     client = MongoClient()
 #     db = client['flint-dummy']
-#     collection = db['m4u']
+#     collection = db['merkle']
 
 #     # populate tree
 #     for d in collection.find():

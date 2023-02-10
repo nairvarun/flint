@@ -61,8 +61,8 @@ def get_state():
 
 def main():
     # upload()
-    challenge()
-    # get_state()
+    # challenge()
+    get_state()
 
 
 if __name__ == "__main__":
