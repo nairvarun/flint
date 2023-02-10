@@ -43,10 +43,10 @@ async def challenge(data: str):
     proof = tree.generate_audit_proof(challenge)
     try:
         proof.verify()
-        return True
+        return "ok"
     except Exception as e:
         print(e)
-        return False
+        return f"{data} has been tampered"
 
 @app.get("/state")
 async def get_state():
@@ -64,24 +64,24 @@ async def get_state():
 
     return tree.get_root_hash()
 
-@app.get("/proove")
-async def proove(state: str):
-    # merkle tree
-    tree = MerkleTree()
+# @app.get("/proove")
+# async def proove(state: str):
+#     # merkle tree
+#     tree = MerkleTree()
 
-    # establish conection
-    client = MongoClient()
-    db = client['flint-dummy']
-    collection = db['m4u']
+#     # establish conection
+#     client = MongoClient()
+#     db = client['flint-dummy']
+#     collection = db['m4u']
 
-    # populate tree
-    for d in collection.find():
-        tree.encrypt(str({k:v for k, v in d.items() if k not in {"_id"}}))
+#     # populate tree
+#     for d in collection.find():
+#         tree.encrypt(str({k:v for k, v in d.items() if k not in {"_id"}}))
 
-    proof = tree.generate_consistency_proof(challenge=state.encode())
-    try:
-        proof.verify()
-        return True
-    except Exception as e:
-        print(e)
-        return False
+#     proof = tree.generate_consistency_proof(challenge=state.encode())
+#     try:
+#         proof.verify()
+#         return True
+#     except Exception as e:
+#         print(e)
+#         return False

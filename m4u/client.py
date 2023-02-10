@@ -47,23 +47,22 @@ def challenge():
     ]
     for d in dummy_data:
         r = requests.get(f'http://127.0.0.1:8000/challenge?data={str(d)}')
-        print(r.text)
+        print(r.text.strip('"'))
 
 
 def get_state():
     r = requests.get(f'http://127.0.0.1:8000/state')
     print(r.text)
 
-def proove(state):
-    r = requests.get(f'http://127.0.0.1:8000/proove?state={state}')
-    print(r.text)
+# def proove(state):
+#     r = requests.get(f'http://127.0.0.1:8000/proove?state={state}')
+#     print(r.text)
 
 
 def main():
     # upload()
-    # challenge()
-    get_state()
-    # proove()
+    challenge()
+    # get_state()
 
 
 if __name__ == "__main__":
