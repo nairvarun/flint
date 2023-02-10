@@ -60,11 +60,10 @@ def proove(state):
 
 
 def main():
-    s = get_state()
-    upload()
+    # upload()
     # challenge()
-    # get_state()
-    proove(s)
+    get_state()
+    # proove()
 
 
 if __name__ == "__main__":

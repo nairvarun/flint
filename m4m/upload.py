@@ -39,7 +39,7 @@ def main():
         d["sig"] = rsa.sign(str(d).encode(), priv_key, "SHA-256")
 
     # upload dummy data
-    # collection.insert_many(dummy_data)
+    collection.insert_many(dummy_data)
 
 
 if __name__ == "__main__":
